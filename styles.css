@@ -1,0 +1,117 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos del encabezado */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #d5006d;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los botones */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #d5006d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Espaciado entre botones */
+}
+
+button:hover {
+    background-color: #c51162;
+}
+
+/* Estilos para mostrar mensajes */
+#messageDisplay {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d5006d;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+    color: #333;
+    transition: opacity 0.5s ease;
+}
+
+/* Ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilos de la lista de mensajes */
+.message-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.message-list h2 {
+    font-size: 1.5em;
+    color: #d5006d;
+}
+
+.message-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.message-list li {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d5006d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: transform 0.2s;
+}
+
+.message-list li:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos del pie de página */
+footer {
+    margin-top: 20px;
+}
+
+#backButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#backButton:hover {
+    background-color: #004d40;
+}

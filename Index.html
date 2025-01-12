@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cachetoncita </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Hola, mi cachetoncita! 🌟</h1>
+            <p>Esta página es un pequeño regalo para ti, mi bebé, te amo mi cachetoncita. 💖</p>
+        </header>
+        <main>
+            <h2>Texto de amor</h2>
+            <div class="category-container">
+                <button class="category-button" data-category="love">Mensajes de Amor</button>
+                <button class="category-button" data-category="quotes">Citas Inspiradoras</button>
+                <button class="category-button" data-category="poems">Poemas Cortos</button>
+            </div>
+            <div id="message" class="hidden"></div>
+            <button id="memoryButton">Recuerdos</button>
+            <button id="poetryButton">Poesias que te dedico</button>
+            <button id="romanticMessagesButton">Mensajes para ti amor</button>
+        </main>
+        <footer>
+            <p>Te amo más de lo que las palabras pueden expresar. Siempre estaré aquí para ti. 🌹</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Mensajes románticos por categoría
+        const messages = {
+            love: [
+                "Eres la razón por la que sonrío cada día. 😊",
+                "Tu risa es mi melodía favorita. 🎶",
+                "Cada momento contigo es un tesoro. 💎",
+                "Eres mi sol en los días nublados. ☀️",
+                "Te amo más de lo que las palabras pueden expresar. ❤️"
+            ],
+            quotes: [
+                "El amor no se mira, se siente. - Pablo Neruda",
+                "Amar es encontrar en la felicidad de otro tu propia felicidad. - Gottfried Wilhelm Leibniz",
+                "Te quiero no solo por lo que eres, sino por lo que soy cuando estoy contigo. - Elizabeth Barrett Browning",
+                "El amor es la poesía de los sentidos. - Honoré de Balzac",
+                "Amor eterno, amor profundo, eres la luz que ilumina mi mundo. - Alfonsina Storni"
+            ],
+            poems: [
+                "En un beso, sabrás todo lo que he callado. - Pablo Neruda",
+                "Si te quiero es porque sos parte de mí. - Mario Benedetti",
+                "Amor, eres la poesía que da vida a mis días. - Mario Benedetti",
+                "Eres el sueño que nunca quiero despertar. - Mario Benedetti",
+                "Cada día a tu lado es un regalo que atesoro. - Mario Benedetti"
+            ]
+        };
+
+        // Mostrar un mensaje romántico al hacer clic en una categoría
+        document.querySelectorAll('.category-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                const randomIndex = Math.floor(Math.random() * messages[category].length);
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = messages[category][randomIndex];
+                messageDiv.classList.remove('hidden');
+            });
+        });
+
+        // Redirigir al hacer clic en el botón de recuerdos
+        document.getElementById ('memoryButton').addEventListener('click', function() {
+            window.location.href = 'memories.html'; // Cambia 'memories.html' por el nombre de tu archivo
+        });
+
+        // Redirigir al hacer clic en el botón de poesía
+        document.getElementById('poetryButton').addEventListener('click', function() {
+            window.location.href = 'poetryBox.html'; // Redirige a la página de poesías
+        });
+
+        // Redirigir al hacer clic en el botón de mensajes románticos
+        document.getElementById('romanticMessagesButton').addEventListener('click', function() {
+            window.location.href = 'romanticMessages.html'; // Asegúrate de que no haya espacios
+        });
+    </script>
+</body>
+</html>
